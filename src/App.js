@@ -23,18 +23,18 @@ function App() {
     <Router>
       <Sidebar />
       <Switch>
-       
+        <Route path='/' exact component={AlbumContainer}/> 
         <Route path='/artists' component={ArtistContainer}/>
         
       </Switch>
     </Router>
   </div>
 
-    <div>
-      <Navbar/>
-      <ArtistContainer/>
-      <AlbumContainer/>
-    </div>
+    // <div>
+    //   <Navbar/>
+    //   <ArtistContainer/>
+    //   <AlbumContainer/>
+    // </div>
 
   );
 }
