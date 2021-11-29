@@ -1,16 +1,11 @@
 .sidebar {
     background-color: #0C2e4b;
     width: 20%;
-    height: 100%;
+    height: 95%;
     display: flex;
     justify-content: center;
     position: fixed;
-<<<<<<< HEAD
-    top: 0;
-    z-index: -1;
-=======
-    top: 10;
->>>>>>> 1cbf09532e3cc611cc81cc5398827d0a8752514a
+    top: 4em;
 }
 
 .sidebar-text {
