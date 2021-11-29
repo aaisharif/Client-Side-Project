@@ -26,6 +26,35 @@ const AlbumContainer = () => {
         .then(getAlbumData)
     }
 
+    const updateAlbumById = (id) => {
+        console.log("updating album" + id);
+        const albumToUpdate = albums.find(album => album.id === id)
+        //albumToUpdate.completed = true;
+
+        fetch(`http://localhost:8080/api/v1/albums/${id}`, {
+            method: 'PUT',
+            headers: {
+                'Content-type': 'application/json'
+            },
+            body: JSON.stringify(albumToUpdate)
+        })
+            .then(getAlbumData);
+    }
+
+    const deleteAlbumById = (id) => {
+        console.log("deleting album" + id);
+        const albumToDelete = albums.find(album => album.id === id)
+        //albumToDEleted.completed = true;
+
+        fetch(`http://localhost:8080/api/v1/albums/${id}`, {
+            method: 'DELETE',
+            headers: {
+                'Content-type': 'application/json'
+            },
+            body: JSON.stringify(albumToDelete)
+        })
+            .then(getAlbumData);
+    }
 
 
     return(
@@ -33,8 +62,7 @@ const AlbumContainer = () => {
 
         <div>  
             <NewAlbumForm onAlbumSubmission={addNewAlbum}/>   
-            <hr/>  
-            <AlbumList albums={albums}/>
+            <AlbumList albums={albums} onUpdateAlbumById={updateAlbumById} onDeleteAlbumById={deleteAlbumById}/>
         
         </div>
         :

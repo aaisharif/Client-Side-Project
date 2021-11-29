@@ -80,6 +80,9 @@ const NewAlbumForm = ({onAlbumSubmission}) => {
             <div className="formElement">
                 <input type="submit" value="Add Album"/>
             </div>
+            <div className="formElement">
+                <input type="submit" value="Update Album"/>
+            </div>
         </form>
     </>
     )
