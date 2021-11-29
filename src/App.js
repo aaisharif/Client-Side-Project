@@ -1,11 +1,19 @@
 import './App.css';
 import ArtistContainer from './containers/ArtistContainer';
+
 import Sidebar from './components/sidebar/Sidebar';
 import { BrowserRouter as Router, Switch, Route} from 'react-router-dom'; 
+
+import Navbar from './components/navbar/Navbar';
+import AlbumContainer from './containers/AlbumContainer';
+
+
+
 
 
 function App() {
   return (
+
     // <div>
     //   <Navbar/>
     //   <ArtistContainer/>
@@ -21,6 +29,13 @@ function App() {
       </Switch>
     </Router>
   </div>
+
+    <div>
+      <Navbar/>
+      <ArtistContainer/>
+      <AlbumContainer/>
+    </div>
+
   );
 }
 
