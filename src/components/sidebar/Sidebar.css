@@ -1,12 +1,12 @@
 .sidebar {
     background-color: #0C2e4b;
     width: 20%;
-    height: 100vh;
+    height: 100%;
     display: flex;
     justify-content: center;
     position: fixed;
-    top: 0;
-    z-index: -1;
+    top: 10;
+
 }
 
 .sidebar-text {
