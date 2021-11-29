@@ -15,6 +15,18 @@ function ArtistContainer() {
 
     useEffect (getArtistData, []);
 
+    const addNewArtist = (newArtist) => {
+        
+        fetch("http://localhost:8080/api/v1/artists/add", {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(newArtist)
+        })
+            .then(getArtistData);
+    }
+
     // const searchArtist = () => {
     //     return artists.filter(artist => artist.name.toLowerCase().indexOf() > -1); 
     // }
