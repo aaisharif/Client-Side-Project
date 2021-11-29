@@ -1,5 +1,4 @@
 import ArtistComponent from "./ArtistComponent";
-
 import React from 'react'
 
 function ArtistList({artists}) {
