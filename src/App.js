@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import Navbar from './components/navbar/Navbar';
 import AlbumContainer from './containers/AlbumContainer';
 import SongContainer from './containers/SongContainer'
+import AdminContainer from './components/admin/AdminContainer';
 
 
 function App() {
@@ -23,7 +24,7 @@ function App() {
         <Route path='/' exact component={AlbumContainer}/> 
         <Route path='/artists' component={ArtistContainer}/>
         <Route path='/songs' component={SongContainer}/>
-        
+        <Route path='/admin' component={AdminContainer}/>
       </Switch>
     </Router>
   </div>
