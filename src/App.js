@@ -20,6 +20,7 @@ function App() {
     // </div>
 
     <div className="App">
+    <Navbar/>
     <Router>
       <Sidebar />
       <Switch>
