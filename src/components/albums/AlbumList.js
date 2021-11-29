@@ -1,4 +1,5 @@
 import React from 'react'
+import AlbumComponent from "./AlbumComponent"
 
 const AlbumList = ({albums}) => {
 
@@ -12,7 +13,7 @@ const AlbumList = ({albums}) => {
     
     return(
        <div className="album_list">
-           {Albums}
+           {albumComponents}
        </div>
     )
 

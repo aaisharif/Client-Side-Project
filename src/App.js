@@ -1,6 +1,8 @@
 import './App.css';
 import ArtistContainer from './containers/ArtistContainer';
 import Navbar from './components/navbar/Navbar';
+import AlbumContainer from './containers/AlbumContainer';
+
 
 
 
@@ -9,6 +11,7 @@ function App() {
     <div>
       <Navbar/>
       <ArtistContainer/>
+      <AlbumContainer/>
     </div>
   );
 }
