@@ -11,7 +11,6 @@ function Navbar() {
     }
 
 
-
     return (
         <section className="navbar-container navbar-container-bckg-dark ">
             <div className="navbar">
