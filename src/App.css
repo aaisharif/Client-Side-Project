@@ -49,9 +49,9 @@
   margin-bottom: 10px;
 }
 
-/* .float-icon a:hover {
+.float-icon:hover {
   transform: scale(1.2);
-} */
+}
 /* form {
   padding-top: 100px;
   text-align: center;
