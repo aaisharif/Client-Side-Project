@@ -3,6 +3,7 @@ import NewSongForm from './NewSongForm'
 import NewAlbumForm from './NewAlbumForm';
 import NewArtistForm from './NewArtistForm';
 import { useState, useEffect } from "react";
+import Navbar from '../navbar/Navbar';
 
 const AdminContainer = () => {
 
@@ -72,6 +73,7 @@ const AdminContainer = () => {
     return (
 
         <div>
+            <Navbar/>
             <NewArtistForm onArtistSubmission={addNewArtist}/>
             <NewSongForm onSongSubmission={addNewSong}/> 
             <NewAlbumForm onAlbumSubmission={addNewAlbum}/> 
