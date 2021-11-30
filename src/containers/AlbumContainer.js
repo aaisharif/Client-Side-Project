@@ -77,7 +77,6 @@ const AlbumContainer = () => {
         <div>  
             <Navbar handleType={handleType} filter={filter}/> 
             <AlbumList albums={searchAlbum(albums)} onUpdateAlbumById={updateAlbumById} onDeleteAlbumById={deleteAlbumById}/>
-
             {/* <NewAlbumForm onAlbumSubmission={addNewAlbum}/>    */}
             <AlbumList albums={albums} onUpdateAlbumById={updateAlbumById} onDeleteAlbumById={deleteAlbumById}/>
         

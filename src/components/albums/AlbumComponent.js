@@ -6,15 +6,17 @@ import { BsTrash, BsFillTrashFill, BsHeart, BsHeartFill } from "react-icons/bs";
 const AlbumComponent= ({album}) => {
 
     const [modeHeart, setModeHeart] = useState(false); 
-    const [modeTrash, setModeTrash] = useState(false); 
+    // const [modeTrash, setModeTrash] = useState(false); 
 
     const handleOnClick = () => {
          setModeHeart(!modeHeart);  
     }
 
-    const handleOnClick2 = () => {
-        setModeTrash(!modeTrash);  
-   }
+//     const handleOnClick2 = () => {
+//         setModeTrash(!modeTrash);  
+//    }
+
+    
 
     return(
         <>
@@ -30,19 +32,19 @@ const AlbumComponent= ({album}) => {
             <p>{album.release_date}</p>
             <h4>Number of Tracks:</h4>
             <p>{album.number_of_tracks}</p> */}
-            <div className="icon-container">
-            <div className="float-icon">
+            <div className="heart-container">
+            {/* <div className="float-icon">
                         { modeTrash ? 
                             (<BsFillTrashFill onClick={handleOnClick2 }/>)
                             :
                             (<BsTrash onClick={handleOnClick2 }/>)
                         }
-            </div>
+            </div> */}
             <div className="float-icon">
                         { modeHeart ? 
-                        (<BsHeartFill onClick={handleOnClick }/>)
+                        (<BsHeartFill size={28} color={'hotpink'} onClick={handleOnClick }/>)
                         :
-                        (<BsHeart onClick={handleOnClick }/>)
+                        (<BsHeart size={28} onClick={handleOnClick }/>)
                         }
             </div>
             </div>
