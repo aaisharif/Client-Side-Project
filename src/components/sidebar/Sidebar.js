@@ -1,9 +1,14 @@
-import React from 'react'
+import React, {useState} from 'react'
 import SidebarData from './SidebarData';
 import { Link } from 'react-router-dom';
 import './Sidebar.css';
 
+
 function Sidebar() {
+
+    // const [sidebar, setSidebar] = useState(false);
+    // const showSidebar = () => setSidebar(!sidebar);
+
     return (
         <div className="sidebar">
             <ul className="sidebar-menu-items">

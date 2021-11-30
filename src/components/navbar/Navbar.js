@@ -1,6 +1,8 @@
 import {React, useState} from 'react'
 import './Navbar.css'
-import { FaSun, FaMoon } from "react-icons/fa";
+import { FaSun, FaMoon, FaBars } from "react-icons/fa";
+import Sidebar from '../sidebar/Sidebar.js'
+import '../sidebar/Sidebar.css';
 
 
 function Navbar() {
@@ -9,12 +11,17 @@ function Navbar() {
     const handleOnClick = () => {
          setMode(!mode);  
     }
+    const [sidebar, setSidebar] = useState(false);
+    const showSidebar = () => setSidebar(!sidebar);
 
 
     return (
         <section className="navbar-container navbar-container-bckg-dark ">
             <div className="navbar">
                 <div className="navbar-logo navbar-logo--white">
+                    <nav className={sidebar ? 'sidebar active' : ''}>
+                <FaBars className="navbar-hamburger" onClick={showSidebar}/>
+                </nav>
                     <img src={`${process.env.PUBLIC_URL}/assets/navbar/BlueChickenFMLogo.png`} alt="logo"/>
                     <h1 className="navbar-logo-title">BlueChickenFM</h1>
                 </div>

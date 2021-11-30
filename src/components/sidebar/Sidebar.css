@@ -5,9 +5,6 @@
     display: flex;
     justify-content: center;
     position: fixed;
-
-  
-
     top: 4em;
 
 }
@@ -48,4 +45,20 @@
 
 li {
     list-style-type: none;
+}
+
+@media (max-width: 870px) {
+ .sidebar-text a{
+     /* color: red; */
+ }
+
+ .sidebar {
+     left: -100%;
+     transition: 350ms;
+ }
+
+ .active {
+     left: 0;
+     transition: 350ms;
+ }
 }
