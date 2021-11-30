@@ -56,7 +56,7 @@ const AlbumContainer = () => {
             .then(getAlbumData);
     }
 
-
+//look up state managemnt tool - redux
     return(
         albums.length > 0 ?
 

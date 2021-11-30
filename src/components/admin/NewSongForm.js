@@ -40,12 +40,12 @@ const NewSongForm = ({onSongSubmission}) => {
         event.preventDefault();
 
         const newSongs = {
-            name: name,
+            song_name: name,
             genre: genre,
             duration: duration,
-            artistId: artistId,
-            albumId: albumId,
-            releaseDate: releaseDate,
+            artist_id: artistId,
+            album_id: albumId,
+            release_date: releaseDate,
             languages: languages,
             platform: platform
         }

@@ -32,11 +32,11 @@ const NewAlbumForm = ({onAlbumSubmission}) => {
         event.preventDefault();
 
         const newAlbums = {
-            name: name,
-            artistId: artistId,
+            album_name: name,
+            artist_id: artistId,
             genre: genre,
-            releaseDate: releaseDate,
-            noOfTracks: noOfTracks
+            release_date: releaseDate,
+            number_of_tracks: noOfTracks
         }
 
         onAlbumSubmission(newAlbums);
