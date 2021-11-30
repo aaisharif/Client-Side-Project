@@ -10,8 +10,6 @@ function Navbar() {
          setMode(!mode);  
     }
 
-
-
     return (
         <section className="navbar-container navbar-container-bckg-dark ">
             <div className="navbar">

@@ -31,6 +31,7 @@ function ArtistContainer() {
     //     return artists.filter(artist => artist.name.toLowerCase().indexOf() > -1); 
     // }
 
+    const 
 
 
     return (
