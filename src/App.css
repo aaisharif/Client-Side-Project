@@ -53,3 +53,13 @@ form {
   text-align: center;
   top: 15;
 }
+
+@media screen and (max-width: 768px){
+    
+  .list{
+    display: flex;
+    padding-top: 10em;
+    padding-left: 2em; 
+  }
+}
+
