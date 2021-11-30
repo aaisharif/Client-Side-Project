@@ -3,13 +3,15 @@ import './Navbar.css'
 import { FaSun, FaMoon } from "react-icons/fa";
 
 
-function Navbar() {
+function Navbar({handleType, filter}) {
 
     const [mode, setMode] = useState(false); 
+   
+
+    
     const handleOnClick = () => {
          setMode(!mode);  
     }
-
 
     return (
         <section className="navbar-container navbar-container-bckg-dark ">
@@ -20,7 +22,7 @@ function Navbar() {
                 </div>
                 <div className="navbar-right">
                     <div className="navbar-search">
-                        <input  className="navbar-search-searchbar" type="search" size="15" placeholder="Search..."/>
+                        <input  className="navbar-search-searchbar" type="search" size="15" placeholder="Search..." value={filter} onChange={handleType}/>
                     </div>
                     <div className="navbar-toggle">
                         { mode ? 

@@ -1,13 +1,17 @@
 import { useState, useEffect } from "react";
 import ArtistList from "../components/artists/ArtistList";
 import NewArtistForm from "../components/admin/NewArtistForm";
-
-
+import Navbar from "../components/navbar/Navbar";
 
 const ArtistContainer = () => {
 
     const [artists, setArtists] = useState([])
+    const [filter, setFilter] = useState('')
 
+
+    const handleType = (e) => {
+        setFilter(e.target.value)
+    }
 
     const getArtistData = () => {
         fetch("http://localhost:8080/api/v1/artists")
@@ -60,18 +64,17 @@ const ArtistContainer = () => {
             .then(getArtistData);
     }
 
-    // const searchArtist = () => {
-    //     return artists.filter(artist => artist.name.toLowerCase().indexOf() > -1); 
-    // }
-
-
+    const searchArtist = (artists) => {
+        return artists.filter(artist => artist.artist_name.toLowerCase().indexOf(filter.toLowerCase().trim()) > -1); 
+    }
 
     return (
         artists.length > 0 ?
 
         <div>
+             <Navbar handleType={handleType} filter={filter}/>
              <NewArtistForm onArtistSubmission={addNewArtist}/>   
-            <ArtistList artists={artists} onUpdateArtistById={updateArtistById} onDeleteArtistById={deleteArtistById}/>
+             <ArtistList artists={searchArtist(artists)} onUpdateArtistById={updateArtistById} onDeleteArtistById={deleteArtistById}/>
             
         </div>
         :

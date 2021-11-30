@@ -1,11 +1,18 @@
 import AlbumList from "../components/albums/AlbumList";
 import { useState, useEffect } from "react";
 import NewAlbumForm from "../components/admin/NewAlbumForm"
-
+import Navbar from "../components/navbar/Navbar";
 
 const AlbumContainer = () => {
 
     const [albums, setAlbums] = useState ([]);
+    const [filter, setFilter] = useState('')
+
+    console.log(albums)
+
+    const handleType = (e) => {
+        setFilter(e.target.value)
+    }
 
     const getAlbumData = () => {
         fetch("http://localhost:8080/api/v1/albums")
@@ -57,12 +64,18 @@ const AlbumContainer = () => {
     }
 
 
+    const searchAlbum = (albums) => {
+        return albums.filter(album=> album.album_name.toLowerCase().indexOf(filter.toLowerCase().trim()) > -1); 
+    }
+
+
     return(
         albums.length > 0 ?
 
         <div>  
+            <Navbar handleType={handleType} filter={filter}/>
             <NewAlbumForm onAlbumSubmission={addNewAlbum}/>   
-            <AlbumList albums={albums} onUpdateAlbumById={updateAlbumById} onDeleteAlbumById={deleteAlbumById}/>
+            <AlbumList albums={searchAlbum(albums)} onUpdateAlbumById={updateAlbumById} onDeleteAlbumById={deleteAlbumById}/>
         
         </div>
         :

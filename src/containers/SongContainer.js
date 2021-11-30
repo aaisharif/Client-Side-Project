@@ -1,11 +1,19 @@
 import { useState, useEffect } from "react";
 import NewSongForm from "../components/admin/NewSongForm"
 import SongList from "../components/songs/SongList";
-
+import Navbar from "../components/navbar/Navbar";
 
 const SongContainer = () => {
 
     const [songs, setSongs] = useState ([]);
+    const [filter, setFilter] = useState('');
+
+
+    const handleType = (e) => {
+        setFilter(e.target.value);
+    }
+
+    console.log(songs)
 
     const getSongData = () => {
         fetch("http://localhost:8080/api/v1/songs")
@@ -56,13 +64,17 @@ const SongContainer = () => {
             .then(getSongData);
     }
 
+    const searchSong = (songs) => {
+        return songs.filter(song => song.song_name.toLowerCase().indexOf(filter.toLowerCase().trim()) > -1); 
+    }
 
     return(
         songs.length > 0 ?
 
         <div>  
+            <Navbar handleType={handleType} filter={filter}/>
             <NewSongForm onSongSubmission={addNewSong}/>   
-            <SongList songs={songs} onUpdateSongById={updateSongById} onDeleteSongById={deleteSongById}/>
+            <SongList songs={searchSong(songs)} onUpdateSongById={updateSongById} onDeleteSongById={deleteSongById}/>
         
         </div>
         :
