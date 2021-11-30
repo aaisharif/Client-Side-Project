@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Code+Latin:wght@300;400;500;600&family=Nunito+Sans:wght@300;600;800&family=Roboto:wght@300;400;500&display=swap');
+
 *{
   margin: 0; 
   padding: 0; 
@@ -9,10 +11,10 @@
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  background-color: rgb(47, 88, 123);
+  background-color: rgb(39, 49, 74);
   /* background-color: rgb(47, 88, 123); */
   padding-top: 90px;
-  padding-left: 300px;
+  padding-left: 270px;
 }
 
 .component{
@@ -22,7 +24,7 @@
     color: white;
     line-height: 1;
     padding: 20px;
-    margin: 20px;
+    margin: 35px;
     border: 0.5px black solid;
     border-radius: 15px;
     background-color: rgb(12, 22, 57);

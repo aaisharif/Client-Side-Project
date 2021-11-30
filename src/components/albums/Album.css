@@ -1,0 +1,259 @@
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Code+Latin:wght@300;400;500;600&family=Nunito+Sans:wght@300;600;800&family=Roboto:wght@300;400;500&display=swap');
+
+.home-page{
+    padding-top: 115px;
+    padding-left: 282px;
+    padding-bottom: 20px;
+    background-color: rgb(39, 49, 74);
+  }
+
+
+.for-chickens{
+    
+    height: 50px;
+    width:140px;
+    position:relative;
+    right: -470px;
+    top: 430px;
+}  
+
+.for-chickens img{
+    height: 90px;
+    width: 220px;
+}
+
+
+.heading{
+    font-family: Phantomsans, sans-serif;
+    padding: 20px;
+    width: 505px;
+    height: 250px;
+    background-color: rgb(192, 223, 255);
+    background: linear-gradient(0.25turn, #59b3da, #ffffff, #ffad55);
+}
+  
+.h1-1{
+    font-size: 60px;
+    font-weight: 600;
+    color: rgb(0, 8, 70);
+    padding-bottom: 10px;
+    text-shadow: 1px 1px 0 #ffffff;
+    
+   
+  }
+
+.h1-2{
+    font-size: x-large;
+    color: rgb(255, 255, 255);
+    text-shadow: 1px 1px 0 #000000;
+    
+}
+
+.blueChicken img{
+    border-bottom-right-radius: 20px;
+}
+
+.pinkChicken img{
+    border-bottom-left-radius: 20px;
+}
+
+.yellowChicken img{
+    border-top-left-radius: 20px;
+}
+
+.greenChicken img{
+    border-top-right-radius: 20px;
+}
+
+/* .blueChicken:hover img{
+    transform: scale(1.01);
+}
+
+.pinkChicken:hover{
+    transform: scale(1.01);
+}
+
+.greenChicken:hover{
+    transform: scale(1.01);
+}
+
+.yellowChicken:hover{
+    transform: scale(1.01);
+} */
+
+.chickens-grid{
+  position:absolute;
+  top:110px;
+  right: 40px;
+  width:528px;
+  height:400px;
+  background-color:rgb(0, 0, 0);
+  border-radius: 20px;
+  display:grid;
+  grid-template-columns: 240px 100px;
+  grid-template-rows: 192px 5px;
+  grid-row: auto auto; 
+  grid-column-gap: 20px;
+  
+ }  
+
+/* .grid-item{
+    background-color:rgb(125, 155, 255);
+    padding:8px;
+    color:#fff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+  } */
+  
+  .muzieknootjes {
+    right: 300px;
+    top: -280px; 
+    display: block;
+    margin: auto;
+    position: relative;
+    width: 50%;
+    min-width: 300px;
+    height: 100px;
+    border: 0px solid #000;
+    
+  }
+  
+  .noot-1,
+  .noot-2,
+  .noot-3,
+  .noot-4 {
+    position: absolute;
+    animation: notes 2s infinite linear;
+    font-size: 35px;
+    opacity: 0;
+  }
+  
+  .noot-1 {
+    top: 60px;
+    left: 0;
+    animation-delay: 0.5s;
+  }
+  
+  .noot-2 {
+    top: 30px;
+    left: 30%;
+    animation-delay: 1s;
+  }
+  
+  .noot-3 {
+    top: 90px;
+    left: 60%;
+    animation-delay: 1.5s;
+  }
+  
+  .noot-4 {
+    top: 40px;
+    left: 90%;
+    animation-delay: 2s;
+  }
+  
+  @keyframes notes {
+    0% {
+      transform: scale(1) translate(0, 0);
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+      transform: scale(1.5) translate(50%, -50%);
+    }
+    80% {
+      opacity: 0;
+      transform: scale(1.5) translate(100%, -100%);
+    }
+    100% {
+      transform: scale(1.5) translate(100%, -100%);
+      opacity: 0;
+    }
+  }
+
+  /* SIGN UP & LOGIN BUTTONS */
+.buttons{
+    position: absolute;
+}
+  .button-login{
+      position: relative;
+      bottom: 132px;
+      left: 270px;
+  }
+
+  .button-signup{
+    position: relative;
+    bottom: 70px;
+    right: -30px;
+}
+  
+  .button-signup, .button-login {
+    align-items: center;
+    background-image: linear-gradient(144deg,#ffa304, #ff04a3 50%,#52c3ff, rgb(7, 255, 57));
+    border: 0;
+    border-radius: 8px;
+    box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    display: flex;
+    font-family: Phantomsans, sans-serif;
+    font-size: 20px;
+    justify-content: center;
+    line-height: 1em;
+    max-width: 100%;
+    min-width: 140px;
+    padding: 3px;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    cursor: pointer;  
+  }
+  
+  .button-signup:active,
+  .button-signup:hover {
+    outline: 0;
+  }
+  .button-login:active,
+  .button-login:hover {
+    outline: 0;
+  }
+  
+  .button-signup span {
+    background-color: rgb(5, 6, 45);
+    padding: 16px 24px;
+    border-radius: 6px;
+    width: 100%;
+    height: 100%;
+    transition: 300ms;
+  }
+  .button-login span {
+    background-color: rgb(5, 6, 45);
+    padding: 16px 24px;
+    border-radius: 6px;
+    width: 100%;
+    height: 100%;
+    transition: 300ms;
+  }
+  
+  .button-signup:hover span {
+    background: none;
+  }
+  .button-login:hover span {
+    background: none;
+  }
+  
+  @media (min-width: 768px) {
+    .button-signup {
+      font-size: 24px;
+      min-width: 196px;
+    }
+    .button-login {
+        font-size: 24px;
+        min-width: 196px;
+      }
+  }  
+  
+  
