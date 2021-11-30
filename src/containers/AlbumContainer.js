@@ -64,10 +64,12 @@ const AlbumContainer = () => {
     }
 
 
+
     const searchAlbum = (albums) => {
         return albums.filter(album=> album.album_name.toLowerCase().indexOf(filter.toLowerCase().trim()) > -1); 
     }
 
+    //look up state managemnt tool - redux
 
     return(
         albums.length > 0 ?
@@ -76,6 +78,9 @@ const AlbumContainer = () => {
             <Navbar handleType={handleType} filter={filter}/>
             <NewAlbumForm onAlbumSubmission={addNewAlbum}/>   
             <AlbumList albums={searchAlbum(albums)} onUpdateAlbumById={updateAlbumById} onDeleteAlbumById={deleteAlbumById}/>
+
+            {/* <NewAlbumForm onAlbumSubmission={addNewAlbum}/>    */}
+            <AlbumList albums={albums} onUpdateAlbumById={updateAlbumById} onDeleteAlbumById={deleteAlbumById}/>
         
         </div>
         :

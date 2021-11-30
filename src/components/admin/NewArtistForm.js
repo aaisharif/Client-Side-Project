@@ -20,12 +20,14 @@ const NewArtistForm = ({onArtistSubmission}) => {
     }
 
     const handleFormSubmission = (event) => {
+        
+        console.log("submitting form")
         event.preventDefault();
 
         const newArtists = {
-            name: name,
+            artist_name: name,
             nationality: nationality,
-            biggestHit: biggestHit
+            biggest_hit: biggestHit
         }
 
         onArtistSubmission(newArtists);
@@ -42,7 +44,7 @@ const NewArtistForm = ({onArtistSubmission}) => {
         <h2>Add a new Artist:</h2>
         <form onSubmit={handleFormSubmission}>
             <div className="formElement">
-                <label htmlFor="name">Name: </label>
+                <label htmlFor="name">Artist Name: </label>
                 <input type="text" id="name" value={name} onChange={handleNameChange}/>
             </div>
             <div className="formElement">
@@ -52,6 +54,9 @@ const NewArtistForm = ({onArtistSubmission}) => {
             <div className="formElement">
                 <label htmlFor="BiggestHit">BiggestHit: </label>
                 <input type="text" id="biggestHit" value={biggestHit} onChange={handleBiggestHitChange}/>
+            </div>
+            <div className="formElement">
+                <input type="submit" value="Add Artist"/>
             </div>
         </form>
     </>

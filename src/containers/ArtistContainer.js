@@ -72,9 +72,14 @@ const ArtistContainer = () => {
         artists.length > 0 ?
 
         <div>
+
              <Navbar handleType={handleType} filter={filter}/>
              <NewArtistForm onArtistSubmission={addNewArtist}/>   
              <ArtistList artists={searchArtist(artists)} onUpdateArtistById={updateArtistById} onDeleteArtistById={deleteArtistById}/>
+
+             {/* <NewArtistForm onArtistSubmission={addNewArtist}/>    */}
+            <ArtistList artists={artists} onUpdateArtistById={updateArtistById} onDeleteArtistById={deleteArtistById}/>
+
             
         </div>
         :

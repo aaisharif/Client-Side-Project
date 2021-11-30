@@ -32,11 +32,11 @@ const NewAlbumForm = ({onAlbumSubmission}) => {
         event.preventDefault();
 
         const newAlbums = {
-            name: name,
-            artistId: artistId,
+            album_name: name,
+            artist_id: artistId,
             genre: genre,
-            releaseDate: releaseDate,
-            noOfTracks: noOfTracks
+            release_date: releaseDate,
+            number_of_tracks: noOfTracks
         }
 
         onAlbumSubmission(newAlbums);
@@ -56,7 +56,7 @@ const NewAlbumForm = ({onAlbumSubmission}) => {
         <h2>Add a new Album:</h2>
         <form onSubmit={handleFormSubmission}>
             <div className="formElement">
-                <label htmlFor="name">Name: </label>
+                <label htmlFor="name">Album Name: </label>
                 <input type="text" id="name" value={name} onChange={handleNameChange}/>
             </div>
             <div className="formElement">
