@@ -1,4 +1,5 @@
 import React from 'react'
+import './Admin.css'
 import NewSongForm from './NewSongForm'
 import NewAlbumForm from './NewAlbumForm';
 import NewArtistForm from './NewArtistForm';
