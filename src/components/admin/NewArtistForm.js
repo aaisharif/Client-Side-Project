@@ -19,6 +19,8 @@ const NewArtistForm = ({onArtistSubmission}) => {
         setBiggestHit(event.target.value);
     }
 
+    const handleFormSubmission = (event) => {
+        event.preventDefault();
 
         const newArtists = {
             name: name,
@@ -55,5 +57,6 @@ const NewArtistForm = ({onArtistSubmission}) => {
     </>
     )
 
+}
 
 export default NewArtistForm;

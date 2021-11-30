@@ -40,7 +40,7 @@ const ArtistContainer = () => {
             headers: {
                 'Content-type': 'application/json'
             },
-            body: JSON.stringify(newArtist)
+            body: JSON.stringify(artistToUpdate)
         })
             .then(getArtistData);
     }
