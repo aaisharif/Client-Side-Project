@@ -56,12 +56,12 @@ const AlbumContainer = () => {
             .then(getAlbumData);
     }
 
-//look up state managemnt tool - redux
+    //look up state managemnt tool - redux
     return(
         albums.length > 0 ?
 
         <div>  
-            <NewAlbumForm onAlbumSubmission={addNewAlbum}/>   
+            {/* <NewAlbumForm onAlbumSubmission={addNewAlbum}/>    */}
             <AlbumList albums={albums} onUpdateAlbumById={updateAlbumById} onDeleteAlbumById={deleteAlbumById}/>
         
         </div>

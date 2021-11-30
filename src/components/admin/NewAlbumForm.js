@@ -56,7 +56,7 @@ const NewAlbumForm = ({onAlbumSubmission}) => {
         <h2>Add a new Album:</h2>
         <form onSubmit={handleFormSubmission}>
             <div className="formElement">
-                <label htmlFor="name">Name: </label>
+                <label htmlFor="name">Album Name: </label>
                 <input type="text" id="name" value={name} onChange={handleNameChange}/>
             </div>
             <div className="formElement">

@@ -44,7 +44,7 @@ const NewArtistForm = ({onArtistSubmission}) => {
         <h2>Add a new Artist:</h2>
         <form onSubmit={handleFormSubmission}>
             <div className="formElement">
-                <label htmlFor="name">Name: </label>
+                <label htmlFor="name">Artist Name: </label>
                 <input type="text" id="name" value={name} onChange={handleNameChange}/>
             </div>
             <div className="formElement">

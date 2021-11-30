@@ -69,7 +69,7 @@ const NewSongForm = ({onSongSubmission}) => {
         <h2>Add a new Song:</h2>
         <form onSubmit={handleFormSubmission}>
             <div className="formElement">
-                <label htmlFor="name">Name: </label>
+                <label htmlFor="name">Song Name: </label>
                 <input type="text" id="name" value={name} onChange={handleNameChange}/>
             </div>
             <div className="formElement">

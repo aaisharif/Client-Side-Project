@@ -1,58 +1,82 @@
-// import React from 'react'
-// import NewSongForm from './NewSongForm'
-// import NewAlbumForm from './NewAlbumForm';
-// import { useState, useEffect } from "react";
+import React from 'react'
+import NewSongForm from './NewSongForm'
+import NewAlbumForm from './NewAlbumForm';
+import NewArtistForm from './NewArtistForm';
+import { useState, useEffect } from "react";
 
-// const AdminContainer = () => {
+const AdminContainer = () => {
 
-//     const [songs, setSongs] = useState ([]);
-//     const [albums, setAlbums] = useState ([]);
+    const [songs, setSongs] = useState ([]);
+    const [albums, setAlbums] = useState ([]);
+    const [artists, setArtists] = useState([])
 
-//     const getSongData = () => {
-//         fetch("http://localhost:8080/api/v1/songs")
-//         .then(response => response.json())
-//         .then(data => setSongs(data));
-//     }
+    const getArtistData = () => {
+        fetch("http://localhost:8080/api/v1/artists")
+        .then(resp=>resp.json())
+        .then(data =>  setArtists(data))
+        }
+   
 
-//     useEffect(getSongData, []);
+    useEffect (getArtistData, []);
 
-//     const addNewSong = (newSong) => {
-//         fetch("http://localhost:8080/api/v1/songs/add", {
-//             method: 'POST',
-//             headers: {
-//                 'Content-Type': 'application/json'
-//             },
-//             body: JSON.stringify(newSong)
-//         })
-//         .then(getSongData)
-//     }
+    const addNewArtist = (newArtist) => {
+        
+        fetch("http://localhost:8080/api/v1/artists/add", {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(newArtist)
+        })
+            .then(getArtistData);
+    }
+   
+    const getSongData = () => {
+        fetch("http://localhost:8080/api/v1/songs")
+        .then(response => response.json())
+        .then(data => setSongs(data));
+    }
 
-//     const getAlbumData = () => {
-//         fetch("http://localhost:8080/api/v1/albums")
-//         .then(response => response.json())
-//         .then(data => setAlbums(data));
-//     }
+    useEffect(getSongData, []);
 
-//     useEffect(getAlbumData, []);
+    const addNewSong = (newSong) => {
+        fetch("http://localhost:8080/api/v1/songs/add", {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(newSong)
+        })
+        .then(getSongData)
+    }
 
-//     const addNewAlbum = (newAlbum) => {
-//         fetch("http://localhost:8080/api/v1/albums/add", {
-//             method: 'POST',
-//             headers: {
-//                 'Content-Type': 'application/json'
-//             },
-//             body: JSON.stringify(newAlbum)
-//         })
-//         .then(getAlbumData)
-//     }
+    const getAlbumData = () => {
+        fetch("http://localhost:8080/api/v1/albums")
+        .then(response => response.json())
+        .then(data => setAlbums(data));
+    }
 
-//     return (
+    useEffect(getAlbumData, []);
 
-//         <div>
-//             <NewSongForm onSongSubmission={addNewSong}/> 
-//             <NewAlbumForm onAlbumSubmission={addNewAlbum}/> 
-//         </div>
-//     )
-// }
+    const addNewAlbum = (newAlbum) => {
+        fetch("http://localhost:8080/api/v1/albums/add", {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(newAlbum)
+        })
+        .then(getAlbumData)
+    }
 
-// export default AdminContainer
+    return (
+
+        <div>
+            <NewArtistForm onArtistSubmission={addNewArtist}/>
+            <NewSongForm onSongSubmission={addNewSong}/> 
+            <NewAlbumForm onAlbumSubmission={addNewAlbum}/> 
+        </div>
+    )
+}
+
+export default AdminContainer

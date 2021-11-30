@@ -70,7 +70,7 @@ const ArtistContainer = () => {
         artists.length > 0 ?
 
         <div>
-             <NewArtistForm onArtistSubmission={addNewArtist}/>   
+             {/* <NewArtistForm onArtistSubmission={addNewArtist}/>    */}
             <ArtistList artists={artists} onUpdateArtistById={updateArtistById} onDeleteArtistById={deleteArtistById}/>
             
         </div>
