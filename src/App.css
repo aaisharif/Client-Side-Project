@@ -1,38 +1,53 @@
-.App {
-  text-align: center;
+*{
+  margin: 0; 
+  padding: 0; 
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.list{
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  background-color: rgb(47, 88, 123);
+  padding-top: 90px;
+  padding-left: 300px;
 }
 
-.App-link {
-  color: #61dafb;
+.component{
+    flex: 1 0 21%;
+    /* https://stackoverflow.com/questions/29546550/flexbox-4-items-per-row */
+    text-align: center;
+    color: white;
+    line-height: 1;
+    padding: 20px;
+    margin: 10px;
+    border: 0.5px black solid;
+    border-radius: 15px;
+    background-color: rgb(12, 22, 57);
+    height: 400px;
+    width: 300px;
+
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* trying to make the trash can and hear align */
+.icon-container{
+  padding: 20px;
+}
+
+.float-icon{
+    width: 50%;
+    float: right;
+    padding: 10px;
+}
+
+.component img {
+  border-radius: 15px;
+  margin-bottom: 10px;
+}
+
+form {
+  padding-top: 100px;
+  text-align: center;
+  top: 15;
 }
