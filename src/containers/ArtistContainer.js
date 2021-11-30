@@ -1,7 +1,10 @@
 import { useState, useEffect } from "react";
 import ArtistList from "../components/artists/ArtistList";
+import NewArtistForm from "../components/admin/NewArtistForm";
 
-function ArtistContainer() {
+
+
+const ArtistContainer = () => {
 
     const [artists, setArtists] = useState([])
 
@@ -27,6 +30,36 @@ function ArtistContainer() {
             .then(getArtistData);
     }
 
+    const updateArtistById = (id) => {
+        console.log("updating artist" + id);
+        const artistToUpdate = artists.find(artist => artist.id === id)
+        artistToUpdate.completed = true;
+
+        fetch(`http://localhost:8080/api/v1/artists/${id}`,{
+            method: 'PUT',
+            headers: {
+                'Content-type': 'application/json'
+            },
+            body: JSON.stringify(newArtist)
+        })
+            .then(getArtistData);
+    }
+
+    const deleteArtistById = (id) => {
+        console.log("deleting artist" + id);
+        const artistToDelete = artists.find(artist => artist.id === id)
+        //artistToDeleted.completed = true;
+
+        fetch(`http://localhost:8080/api/v1/artists/${id}`, {
+            method: 'DELETE',
+            headers: {
+                'Content-type': 'application/json'
+            },
+            body: JSON.stringify(artistToDelete)
+        })
+            .then(getArtistData);
+    }
+
     // const searchArtist = () => {
     //     return artists.filter(artist => artist.name.toLowerCase().indexOf() > -1); 
     // }
@@ -34,10 +67,16 @@ function ArtistContainer() {
 
 
     return (
+        artists.length > 0 ?
+
         <div>
-            <ArtistList artists={artists} />
+             <NewArtistForm onArtistSubmission={addNewArtist}/>   
+            <ArtistList artists={artists} onUpdateArtistById={updateArtistById} onDeleteArtistById={deleteArtistById}/>
+            
         </div>
+        :
+        <p>Loading...</p>
     )
 }
 
-export default ArtistContainer
+export default ArtistContainer;

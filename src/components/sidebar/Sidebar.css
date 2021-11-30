@@ -5,7 +5,11 @@
     display: flex;
     justify-content: center;
     position: fixed;
+
+  
+
     top: 4em;
+
 }
 
 .sidebar-text {
