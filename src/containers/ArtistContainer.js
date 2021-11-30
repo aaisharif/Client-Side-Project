@@ -74,7 +74,6 @@ const ArtistContainer = () => {
         <div>
 
              <Navbar handleType={handleType} filter={filter}/>
-             <NewArtistForm onArtistSubmission={addNewArtist}/>   
              <ArtistList artists={searchArtist(artists)} onUpdateArtistById={updateArtistById} onDeleteArtistById={deleteArtistById}/>
 
              {/* <NewArtistForm onArtistSubmission={addNewArtist}/>    */}

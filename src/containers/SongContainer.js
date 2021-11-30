@@ -74,9 +74,7 @@ const SongContainer = () => {
         <div>  
 
             <Navbar handleType={handleType} filter={filter}/>
-            <NewSongForm onSongSubmission={addNewSong}/>   
             <SongList songs={searchSong(songs)} onUpdateSongById={updateSongById} onDeleteSongById={deleteSongById}/>
-
             {/* <NewSongForm onSongSubmission={addNewSong}/>    */}
             <SongList songs={songs} onUpdateSongById={updateSongById} onDeleteSongById={deleteSongById}/>
 
