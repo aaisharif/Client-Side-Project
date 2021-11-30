@@ -10,7 +10,7 @@ function ArtistList({artists}) {
     })
 
     return (
-        <div className="artist-list">
+        <div className="list">
             {artistComponents}
         </div>
     )

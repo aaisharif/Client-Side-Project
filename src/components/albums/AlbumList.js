@@ -12,7 +12,7 @@ const AlbumList = ({albums}) => {
 
     
     return(
-       <div className="album-list">
+       <div className="list">
            {albumComponents}
        </div>
     )
