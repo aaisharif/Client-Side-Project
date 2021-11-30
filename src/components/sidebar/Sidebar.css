@@ -57,6 +57,11 @@ li {
      transition: 350ms;
  }
 
+ .sidebar.active {
+     left: 0;
+     transition: 350ms;
+ }
+
  .active {
      left: 0;
      transition: 350ms;

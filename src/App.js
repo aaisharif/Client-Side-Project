@@ -19,7 +19,7 @@ function App() {
     <div className="App">
     <Navbar/>
     <Router>
-      <Sidebar />
+    <Sidebar />
       <Switch>
         <Route path='/' exact component={AlbumContainer}/> 
         <Route path='/artists' component={ArtistContainer}/>
