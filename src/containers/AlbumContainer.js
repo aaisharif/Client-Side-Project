@@ -61,7 +61,7 @@ const AlbumContainer = () => {
         albums.length > 0 ?
 
         <div>  
-            {/* <NewAlbumForm onAlbumSubmission={addNewAlbum}/>    */}
+            <NewAlbumForm onAlbumSubmission={addNewAlbum}/>   
             <AlbumList albums={albums} onUpdateAlbumById={updateAlbumById} onDeleteAlbumById={deleteAlbumById}/>
         
         </div>

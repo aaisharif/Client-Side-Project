@@ -24,7 +24,7 @@ function App() {
         <Route path='/' exact component={AlbumContainer}/> 
         <Route path='/artists' component={ArtistContainer}/>
         <Route path='/songs' component={SongContainer}/>
-        <Route path='/admin' component={AdminContainer}/>
+        {/* <Route path='/admin' component={AdminContainer}/> */}
       </Switch>
     </Router>
   </div>

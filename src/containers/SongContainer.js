@@ -61,7 +61,7 @@ const SongContainer = () => {
         songs.length > 0 ?
 
         <div>  
-            {/* <NewSongForm onSongSubmission={addNewSong}/>    */}
+            <NewSongForm onSongSubmission={addNewSong}/>   
             <SongList songs={songs} onUpdateSongById={updateSongById} onDeleteSongById={deleteSongById}/>
         
         </div>

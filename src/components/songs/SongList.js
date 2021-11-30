@@ -12,7 +12,7 @@ const SongList = ({songs}) => {
 
     
     return(
-       <div className="song-list">
+       <div className="list">
            {songComponents}
        </div>
     )
