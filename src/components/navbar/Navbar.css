@@ -117,19 +117,16 @@
         margin-left:20em;
         background-color: var(--dark-blue);
       }
-    /* nav .one{
-      display: flex; 
-    }
-    
-    nav .one li{
-       margin-right: 100px; 
-    }
-    
-    nav .two{
-      display: flex; 
-    }
-    
-    nav .two li{
-      margin-left: 15px; 
-    } */
+
+
+      .mobile-navigation-list-link{
+        text-decoration: none;
+        color: var(--white);
+      }
+
+
+      .mobile-navigation-list-link:hover{
+          color: #4397E1; 
+          /* border-bottom: 1px solid #4397E1; */
+      }
   }

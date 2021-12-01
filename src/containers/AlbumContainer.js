@@ -64,7 +64,6 @@ const AlbumContainer = () => {
     }
 
 
-
     const searchAlbum = (albums) => {
         return albums.filter(album=> album.album_name.toLowerCase().indexOf(filter.toLowerCase().trim()) > -1); 
     }
