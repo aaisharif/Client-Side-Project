@@ -7,7 +7,7 @@ const SongContainer = () => {
 
     const [songs, setSongs] = useState ([]);
     const [filter, setFilter] = useState('');
-
+    const [favourites, setFavourites] = useState([]);
 
     const handleType = (e) => {
         setFilter(e.target.value);
@@ -68,13 +68,29 @@ const SongContainer = () => {
         return songs.filter(song => song.song_name.toLowerCase().indexOf(filter.toLowerCase().trim()) > -1); 
     }
 
+    const addFavouriteSong = (song) =>{
+        const newFavouritesList = [...favourites, song]; 
+        setFavourites(newFavouritesList);
+    }
+
+    const [modeHeart, setModeHeart] = useState([]);
+
+    const handleOnClick = () => {
+        setModeHeart(!modeHeart);  
+   }
+   
     return(
         songs.length > 0 ?
 
         <div>  
             <Navbar handleType={handleType} filter={filter}/>
             {/* <NewSongForm onSongSubmission={addNewSong}/>    */}
-            <SongList songs={searchSong(songs)} onUpdateSongById={updateSongById} onDeleteSongById={deleteSongById}/>
+            <SongList 
+            songs={searchSong(songs)} 
+            favouriteComponent={handleOnClick}
+            handleFavouritesClick={addFavouriteSong}
+            onUpdateSongById={updateSongById} 
+            onDeleteSongById={deleteSongById}/>
         
         </div>
         :

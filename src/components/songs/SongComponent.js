@@ -4,13 +4,10 @@ import placeholder from '../../placeholder/songplaceholder.jpeg'
 import { BsTrash, BsFillTrashFill, BsHeart, BsHeartFill } from "react-icons/bs";
 
 
-const SongComponent= ({song}) => {
+const SongComponent= ({song, favouriteComponent}) => {
 
-    const [modeHeart, setModeHeart] = useState(false);
+    const [modeHeart, setModeHeart] = useState([]);
 
-    const handleOnClick = () => {
-        setModeHeart(!modeHeart);  
-   }
 
     return(
         <div className= "component">
@@ -42,9 +39,9 @@ const SongComponent= ({song}) => {
             </div> */}
             <div className="float-icon">
                         { modeHeart ? 
-                        (<BsHeartFill size={28}  color={'hotpink'} onClick={handleOnClick }/>)
+                        (<BsHeartFill size={28}  color={'hotpink'} onClick={favouriteComponent}/>)
                         :
-                        (<BsHeart size={28} onClick={handleOnClick }/>)
+                        (<BsHeart size={28} onClick={favouriteComponent}/>)
                         }
             </div>
             </div>

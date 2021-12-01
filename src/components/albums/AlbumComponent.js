@@ -16,8 +16,6 @@ const AlbumComponent= ({album}) => {
 //         setModeTrash(!modeTrash);  
 //    }
 
-    
-
     return(
         <>
         <div className= "component">
