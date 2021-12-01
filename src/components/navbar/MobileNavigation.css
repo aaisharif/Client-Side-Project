@@ -1,0 +1,32 @@
+.mobile-navigation{
+    display: none; 
+}
+
+
+
+.mobile-navigation-list{
+    color:aliceblue;
+}
+
+@media screen and (max-width: 768px){
+    .mobile-navigation{
+        display: flex;
+        flex-direction: column;
+        position: absolute; 
+        top: 9.5em; 
+        right: 0; 
+        width: 100%;
+        background: #051337;
+        border-top:  1px solid rgb(47, 88, 123);
+        cursor: pointer;
+    }
+    
+    .mobile-navigation li{
+        padding: 1em; 
+    }
+
+    .mobile-navigation li:hover {
+        color:rgb(47, 88, 123);
+    }
+
+}

@@ -54,8 +54,13 @@
 .float-icon:hover {
   transform: scale(1.2);
 }
-/* form {
-  padding-top: 100px;
-  text-align: center;
-  top: 15;
-} */
+
+@media screen and (max-width: 768px){
+    
+  .list{
+    display: flex;
+    padding-top: 10em;
+    padding-left: 2em; 
+  }
+} 
+
