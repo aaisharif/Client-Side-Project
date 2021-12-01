@@ -4,6 +4,9 @@
     top: 15;
   } */ 
 
+/* * {
+  background-color: red;
+} */
 
   .form-items{
     width: 21rem;
@@ -68,17 +71,104 @@
   }
 
   .admin-forms-container {
-    padding: 90px 0px 0px 300px;
+    /* padding: 90px 0px 0px 300px; */
     display: flex;
     /* padding-left: 20rem; */
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    /* border: 1px solid red; */
+    /* height: 100vh; */
+    border: 1px solid red;
      flex-wrap: wrap;
      background-color: rgb(47,88,123);
+     width: 72rem;
+     height: 44.39rem;
+     margin: 0 0 20px 288px;
+    position: absolute;
+    top: 10%;
+
   }
+
+  /* .navbar-admin-container {
+    position: fixed;
+  } */
 
   h2 {
     padding: 1rem 0;
   }
+
+
+  .muzieknootjes2 {
+    display: block;
+    margin: auto;
+    position: fixed;
+    width: 50%;
+    min-width: 300px;
+    height: 200px;
+    border: 0px solid #000;
+    top: 20%;
+    left: 20%;
+    z-index: 1;
+  }
+  
+  .noot-1_2,
+  .noot-2_2,
+  .noot-3_2,
+  .noot-4_2 {
+    position: absolute;
+    animation: notes 2s infinite linear;
+    font-size: 35px;
+    opacity: 0;
+  }
+  
+  .noot-1_2 {
+    top: 60px;
+    left: 0;
+    animation-delay: 0.5s;
+  }
+  
+  .noot-2_2 {
+    top: 30px;
+    left: 30%;
+    animation-delay: 1s;
+  }
+  
+  .noot-3_2 {
+    top: 90px;
+    left: 60%;
+    animation-delay: 1.5s;
+  }
+  
+  .noot-4_2 {
+    top: 40px;
+    left: 90%;
+    animation-delay: 2s;
+  }
+  
+  @keyframes notes {
+    0% {
+      transform: scale(1) translate(0, 0);
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+      transform: scale(1.5) translate(50%, -50%);
+    }
+    80% {
+      opacity: 0;
+      transform: scale(1.5) translate(100%, -100%);
+    }
+    100% {
+      transform: scale(1.5) translate(100%, -100%);
+      opacity: 0;
+    }
+  }
+
+  /* .muzieknootjes-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    top: 20%;
+    left: 20%;
+    border: 1px solid red;
+  } */
+  

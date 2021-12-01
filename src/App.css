@@ -29,11 +29,14 @@
     border-radius: 15px;
     background-color: rgb(12, 22, 57);
     /* background-color: rgb(12, 22, 57); */
-    height: 400px;
+    height: 410px;
     width: 250px;
 
 }
 
+.name{
+  padding-bottom: 10px;
+}
 /* trying to make the trash can and hear align */
 .heart-container{
   padding: 15px;

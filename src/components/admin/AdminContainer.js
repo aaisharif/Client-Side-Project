@@ -8,21 +8,21 @@ import Navbar from '../navbar/Navbar';
 
 const AdminContainer = () => {
 
-    const [songs, setSongs] = useState ([]);
-    const [albums, setAlbums] = useState ([]);
+    const [songs, setSongs] = useState([]);
+    const [albums, setAlbums] = useState([]);
     const [artists, setArtists] = useState([])
 
     const getArtistData = () => {
         fetch("http://localhost:8080/api/v1/artists")
-        .then(resp=>resp.json())
-        .then(data =>  setArtists(data))
-        }
-   
+            .then(resp => resp.json())
+            .then(data => setArtists(data))
+    }
 
-    useEffect (getArtistData, []);
+
+    useEffect(getArtistData, []);
 
     const addNewArtist = (newArtist) => {
-        
+
         fetch("http://localhost:8080/api/v1/artists/add", {
             method: 'POST',
             headers: {
@@ -32,11 +32,11 @@ const AdminContainer = () => {
         })
             .then(getArtistData);
     }
-   
+
     const getSongData = () => {
         fetch("http://localhost:8080/api/v1/songs")
-        .then(response => response.json())
-        .then(data => setSongs(data));
+            .then(response => response.json())
+            .then(data => setSongs(data));
     }
 
     useEffect(getSongData, []);
@@ -49,13 +49,13 @@ const AdminContainer = () => {
             },
             body: JSON.stringify(newSong)
         })
-        .then(getSongData)
+            .then(getSongData)
     }
 
     const getAlbumData = () => {
         fetch("http://localhost:8080/api/v1/albums")
-        .then(response => response.json())
-        .then(data => setAlbums(data));
+            .then(response => response.json())
+            .then(data => setAlbums(data));
     }
 
     useEffect(getAlbumData, []);
@@ -68,24 +68,45 @@ const AdminContainer = () => {
             },
             body: JSON.stringify(newAlbum)
         })
-        .then(getAlbumData)
+            .then(getAlbumData)
     }
 
     return (
 
         <div>
-            <Navbar/>
+            <Navbar className="navbar-admin-container" />
+
+
+                {/* <div className="muzieknootjes-container"> */}
+                <div class="muzieknootjes2">
+                    <div class="noot-1_2">
+                        &#9835; &#9833;
+                    </div>
+                    <div class="noot-2_2">
+                        &#9833;
+                    </div>
+                    <div class="noot-3_2">
+                        &#9839; &#9834;
+                    </div>
+                    <div class="noot-4_2">
+                        &#9834;
+                    </div>
+                </div>
+                
+               
             <div className="admin-forms-container">
+
                 <div className="new-artist-form form-items">
-                <NewArtistForm onArtistSubmission={addNewArtist}/>
+                    <NewArtistForm onArtistSubmission={addNewArtist} />
                 </div>
                 <div className="new-album-form form-items">
-                <NewAlbumForm onAlbumSubmission={addNewAlbum}/> 
+                    <NewAlbumForm onAlbumSubmission={addNewAlbum} />
                 </div>
                 <div className="new-song-form form-items">
-                <NewSongForm onSongSubmission={addNewSong}/> 
+                    <NewSongForm onSongSubmission={addNewSong} />
                 </div>
             </div>
+
         </div>
     )
 }
