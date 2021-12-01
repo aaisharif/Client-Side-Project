@@ -22,8 +22,10 @@ const AlbumComponent= ({album}) => {
         <>
         <div className= "component">
             <img src = {placeholder} alt={album.name}/>
+            <div className="name">
             <h4>Album Name:</h4>
             <p>{album.album_name}</p>
+            </div>
             {/* <h4>Artist ID:</h4>
             <p>{album.artist_id}</p> */}
             <h4>Genre:</h4>

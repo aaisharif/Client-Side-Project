@@ -28,7 +28,7 @@
     padding: 20px;
     width: 505px;
     height: 250px;
-    background-color: rgb(192, 223, 255);
+    background-color: rgb(208, 231, 255);
     /* background: linear-gradient(0.25turn, #59b3da, #ffffff, #ffad55); */
 }
   
@@ -44,8 +44,8 @@
 
 .h1-2{
     font-size: x-large;
-    color: rgb(167, 214, 255);
-    text-shadow: 1px 1px 0 #000000;
+    color: rgb(9, 43, 72);
+    text-shadow: 1px 1px 0 #f9f9f9;
     
 }
 
