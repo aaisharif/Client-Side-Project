@@ -1,0 +1,48 @@
+/* 
+.component:hover .play{display:block}
+
+.play{
+  position : absolute;
+    display:none;
+    top:20%; 
+    width:40px;
+    margin:0 auto; left:0px;
+    right:0px;
+    z-index:100
+}  */
+
+.PlayButton {
+  /* opacity: 0; */
+}
+
+/* .component:hover {
+  transition: 0.2s ease-in;
+  background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25));
+} */
+
+.PlayButton:hover {
+  /* opacity: 1; */
+
+}
+
+.song-component{
+  flex: 1 0 21%;
+  /* https://stackoverflow.com/questions/29546550/flexbox-4-items-per-row */
+  text-align: center;
+  color: white;
+  line-height: 1;
+  padding: 20px;
+  margin: 35px;
+  border: 0.5px black solid;
+  border-radius: 15px;
+  background-color: rgb(12, 22, 57);
+  /* background-color: rgb(12, 22, 57); */
+  height: 400px;
+  width: 250px;
+  opacity: 0;
+
+}
+
+.song-component:hover {
+  opacity: 1;
+}
