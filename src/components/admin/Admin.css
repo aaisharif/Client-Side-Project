@@ -18,7 +18,7 @@
     background-color: #0C1639;
     /* background-color: white; */
     color: white;
-    /* border: 1px solid red; */
+    border: 3px solid white;
   }
 
   .formElement {
@@ -79,13 +79,22 @@
     /* height: 100vh; */
     border: 1px solid red;
      flex-wrap: wrap;
-     background-color: rgb(47,88,123);
+     /* background-color: rgb(47,88,123); */
+     /* background-image: url('./chickenGroup.png');
+     background-size: 100% 100%; */
      width: 72rem;
      height: 44.39rem;
      margin: 0 0 20px 288px;
     position: absolute;
     top: 10%;
+  }
 
+  .chicken-background {
+    width: 72rem;
+     height: 44.39rem;
+     top: 10%;
+     position: absolute;
+     left: 20%;
   }
 
   /* .navbar-admin-container {
@@ -106,7 +115,20 @@
     height: 200px;
     border: 0px solid #000;
     top: 20%;
-    left: 20%;
+    left: 30%;
+    z-index: 1;
+  }
+
+  .muzieknootjes3 {
+    display: block;
+    margin: auto;
+    position: fixed;
+    width: 50%;
+    min-width: 300px;
+    height: 200px;
+    border: 0px solid #000;
+    top: 80%;
+    left: 30%;
     z-index: 1;
   }
   
@@ -163,12 +185,11 @@
     }
   }
 
-  /* .muzieknootjes-container {
+ .muzieknootjes-container {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     top: 20%;
     left: 20%;
     border: 1px solid red;
-  } */
-  
+  } 
