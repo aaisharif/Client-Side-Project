@@ -1,5 +1,84 @@
-form {
-    padding-top: 100px;
-    text-align: center;
+/* form {
+    /* padding-top: 100px; */
+    /* text-align: center;
     top: 15;
+  } */ 
+
+
+  .form-items{
+    width: 21rem;
+    /* height: 30rem; */
+    /* border: 1px solid black; */
+    margin: 1em;
+    border-radius: 20px;
+    text-align: center;
+    background-color: #0C1639;
+    /* background-color: white; */
+    color: white;
+    /* border: 1px solid red; */
+  }
+
+  .formElement {
+    display:flex;
+    justify-content: space-around;
+  }
+
+  /* .new-album-container {
+    padding-top: 4rem;
+  } */
+
+
+
+  input {
+    border-radius: 3px;
+    appearance: none;
+    background: #f2f2f2;
+    padding: 8px;
+    border: 1px solid grey;
+    font-size: 14px;
+    margin-bottom: 10px;
+   
+    /* display: flex;
+    align-items: end; */
+  }
+
+  input[type=submit] {
+    margin-bottom: 1rem;
+  }
+
+  label {
+    width: 30px;
+    color: white;
+    display: inline-block;
+    /* line-height: 1rem; */
+    /* text-align: right; */
+    /* text-align: start; */
+  }
+
+  .new-artist-form {
+    height: 15rem;
+  }
+
+  .new-song-form {
+    height: 29rem;
+  }
+
+  .new-album-form {
+    height: 22rem;
+  }
+
+  .admin-forms-container {
+    padding: 90px 0px 0px 300px;
+    display: flex;
+    /* padding-left: 20rem; */
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    /* border: 1px solid red; */
+     flex-wrap: wrap;
+     background-color: rgb(47,88,123);
+  }
+
+  h2 {
+    padding: 1rem 0;
   }

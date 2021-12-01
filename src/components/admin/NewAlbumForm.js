@@ -1,4 +1,5 @@
 import { useState } from "react";
+import './Admin.css'
 
 const NewAlbumForm = ({onAlbumSubmission}) => {
 
@@ -52,7 +53,7 @@ const NewAlbumForm = ({onAlbumSubmission}) => {
 
 
     return(
-        <>
+        <div className="new-album-container">
         <h2>Add a new Album:</h2>
         <form onSubmit={handleFormSubmission}>
             <div className="formElement">
@@ -82,7 +83,7 @@ const NewAlbumForm = ({onAlbumSubmission}) => {
                 <input type="update" value="Update Album"/>
             </div> */}
         </form>
-    </>
+    </div>
     )
 }
 
