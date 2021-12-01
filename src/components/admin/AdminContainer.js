@@ -1,4 +1,5 @@
 import React from 'react'
+import './Admin.css'
 import NewSongForm from './NewSongForm'
 import NewAlbumForm from './NewAlbumForm';
 import NewArtistForm from './NewArtistForm';
@@ -74,9 +75,17 @@ const AdminContainer = () => {
 
         <div>
             <Navbar/>
-            <NewArtistForm onArtistSubmission={addNewArtist}/>
-            <NewSongForm onSongSubmission={addNewSong}/> 
-            <NewAlbumForm onAlbumSubmission={addNewAlbum}/> 
+            <div className="admin-forms-container">
+                <div className="new-artist-form form-items">
+                <NewArtistForm onArtistSubmission={addNewArtist}/>
+                </div>
+                <div className="new-album-form form-items">
+                <NewAlbumForm onAlbumSubmission={addNewAlbum}/> 
+                </div>
+                <div className="new-song-form form-items">
+                <NewSongForm onSongSubmission={addNewSong}/> 
+                </div>
+            </div>
         </div>
     )
 }
