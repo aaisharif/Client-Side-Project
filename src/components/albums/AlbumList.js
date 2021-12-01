@@ -21,14 +21,15 @@ const AlbumList = ({ albums }) => {
         <>
             <div className="home-page">
 
-                <div className="for-chickens" >
+                {/* <div className="for-chickens" >
                     <img src={forChickens} alt={"for chickens"} />
-                </div>
+                </div> */}
 
                 <div className="heading">
                     <h1 className="h1-1">LISTEN TO MUSIC</h1>
                     <h1 className="h1-2">AND ENJOY WHAT YOU LOVE</h1>
                 </div>
+                
                 <div class="muzieknootjes">
                     <div class="noot-1">
                         &#9835; &#9833;
