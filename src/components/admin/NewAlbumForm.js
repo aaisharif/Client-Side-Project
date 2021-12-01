@@ -77,7 +77,11 @@ const NewAlbumForm = ({onAlbumSubmission}) => {
                 <input type="text" id="noOfTracks" value={noOfTracks} onChange={handleNoOfTracksChange}/>
             </div>
             <div className="formElement">
-                <input type="submit" value="Add Album"/>
+
+
+                {/* <input type="submit" value="Add Album"/> */}
+                <button type="submit" class="button-64" role="button"><span class="text">Add Album</span></button>
+
             </div>
             {/* <div className="formElement">
                 <input type="update" value="Update Album"/>

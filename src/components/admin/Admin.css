@@ -30,7 +30,7 @@
     padding-top: 4rem;
   } */
 
-
+  
 
   input {
     border-radius: 3px;
@@ -44,10 +44,103 @@
     /* display: flex;
     align-items: end; */
   }
-
-  input[type=submit] {
-    margin-bottom: 1rem;
+  .button-64 {
+    align-items: center;
+    background-image: linear-gradient(144deg,#ffa304, #ff04a3 50%,#52c3ff, rgb(7, 255, 57));
+    border: 0;
+    border-radius: 8px;
+    box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    display: flex;
+    font-family: Phantomsans, sans-serif;
+    font-size: 12px;
+    justify-content: center;
+    line-height: 0.05em;
+    max-width: 100%;
+    min-width: 140px;
+    padding: 3px;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    cursor: pointer;
   }
+  
+  .button-64:active,
+  .button-64:hover {
+    outline: 0;
+  }
+  
+  .button-64 span {
+    background-color: rgb(5, 6, 45);
+    padding: 16px 24px;
+    border-radius: 6px;
+    width: 100%;
+    height: 100%;
+    transition: 300ms;
+  }
+  
+  .button-64:hover span {
+    background: none;
+  }
+  
+  @media (min-width: 768px) {
+    .button-64 {
+      font-size: 24px;
+      min-width: 196px;
+    }
+  }
+  /* input[type=submit] {
+    margin-bottom: 1rem;
+
+    background-image: linear-gradient(144deg,#ffa304, #ff04a3 50%,#52c3ff, rgb(7, 255, 57));
+    border: 0;
+    border-radius: 8px;
+    box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    display: flex;
+    font-family: Phantomsans, sans-serif;
+    font-size: 15px;
+    justify-content: center;
+    line-height: 1em;
+    max-width: 100%;
+    min-width: 140px;
+    padding: 3px;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    cursor: pointer; 
+  }
+
+  input[type=submit]:active,
+  input[type=submit]:hover {
+    outline: 0;
+  }
+
+  input[type=submit] span {
+    background-color: rgb(5, 6, 45);
+    padding: 16px 24px;
+    border-radius: 6px;
+    width: 100%;
+    height: 100%;
+    transition: 300ms;
+  }
+
+  input[type=submit]:hover span {
+    background: none;
+  }
+
+  @media (min-width: 768px) {
+    input[type=submit] {
+      font-size: 24px;
+      min-width: 196px;
+    }
+  }   */
 
   label {
     width: 30px;
@@ -193,3 +286,5 @@
     left: 20%;
     border: 1px solid red;
   } 
+
+
