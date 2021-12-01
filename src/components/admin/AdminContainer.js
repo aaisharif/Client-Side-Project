@@ -78,31 +78,17 @@ const AdminContainer = () => {
 
 
                 {/* <div className="muzieknootjes-container"> */}
-                <div class="muzieknootjes">
-                    <div class="noot-1">
+                <div class="muzieknootjes2">
+                    <div class="noot-1_2">
                         &#9835; &#9833;
                     </div>
-                    <div class="noot-2">
+                    <div class="noot-2_2">
                         &#9833;
                     </div>
-                    <div class="noot-3">
+                    <div class="noot-3_2">
                         &#9839; &#9834;
                     </div>
-                    <div class="noot-4">
-                        &#9834;
-                    </div>
-                </div>
-                <div class="muzieknootjes">
-                    <div class="noot-1">
-                        &#9835; &#9833;
-                    </div>
-                    <div class="noot-2">
-                        &#9833;
-                    </div>
-                    <div class="noot-3">
-                        &#9839; &#9834;
-                    </div>
-                    <div class="noot-4">
+                    <div class="noot-4_2">
                         &#9834;
                     </div>
                 </div>
