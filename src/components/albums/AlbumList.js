@@ -5,7 +5,7 @@ import pinkChicken from './chickens/pink-chicken.PNG'
 import blueChicken from './chickens/blue-chicken.PNG'
 import yellowChicken from './chickens/yellow-chicken.PNG'
 import greenChicken from './chickens/green-chicken.PNG'
-import forChickens from './chickens/forchickens.png'
+
 
 const AlbumList = ({ albums }) => {
 
@@ -29,7 +29,7 @@ const AlbumList = ({ albums }) => {
                     <h1 className="h1-1">LISTEN TO MUSIC</h1>
                     <h1 className="h1-2">AND ENJOY WHAT YOU LOVE</h1>
                 </div>
-                
+
                 <div class="muzieknootjes">
                     <div class="noot-1">
                         &#9835; &#9833;
@@ -75,7 +75,15 @@ const AlbumList = ({ albums }) => {
                     <button class="button-login" role="button"><span class="text">Login</span></button>
                 </div>
 
+
             </div>
+
+            <div className="ribbon-container">
+            <h1 class="ribbon">
+                <strong class="ribbon-content">UK HOT ALBUMS FOR YOUR CLUCKET-LIST! ONLY FOR CHICKENS</strong>
+            </h1>
+            </div>    
+
             <div className="list">
                 {albumComponents}
             </div>

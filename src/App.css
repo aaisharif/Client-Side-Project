@@ -11,10 +11,10 @@
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  background-color: rgb(39, 49, 74);
+  background-color: rgb(24, 30, 45);
   /* background-color: rgb(47, 88, 123); */
-  padding-top: 90px;
-  padding-left: 270px;
+  padding-top: 70px;
+  padding-left: 280px;
 }
 
 .component{
@@ -25,9 +25,9 @@
     line-height: 1;
     padding: 20px;
     margin: 35px;
-    border: 0.5px black solid;
+    /* border: 0.5px black solid; */
     border-radius: 15px;
-    background-color: rgb(12, 22, 57);
+    background-color: #010818;
     /* background-color: rgb(12, 22, 57); */
     height: 410px;
     width: 250px;

@@ -1,51 +1,40 @@
 @import url('https://fonts.googleapis.com/css2?family=M+PLUS+Code+Latin:wght@300;400;500;600&family=Nunito+Sans:wght@300;600;800&family=Roboto:wght@300;400;500&display=swap');
 
 .home-page{
-    padding-top: 115px;
-    padding-left: 282px;
+    padding-top: 100px;
+    padding-left: 300px;
     padding-bottom: 20px;
-    background-color: rgb(39, 49, 74);
+    /* background-color: rgb(39, 49, 74); */
+    background-image: url('./chickens/sound-waves.jpeg');
+    background-size:  63%;
+    height: 35rem;
   }
-
-
-.for-chickens{
-    
-    height: 50px;
-    width:140px;
-    position:relative;
-    right: -470px;
-    top: 430px;
-}  
-
-.for-chickens img{
-    height: 90px;
-    width: 220px;
-}
-
 
 .heading{
     font-family: Phantomsans, sans-serif;
-    padding: 20px;
+    padding-top: 0%;
+    padding-left: 1rem;
     width: 505px;
     height: 250px;
-    background-color: rgb(208, 231, 255);
+    /* background-color: rgb(208, 231, 255); */
     /* background: linear-gradient(0.25turn, #59b3da, #ffffff, #ffad55); */
 }
   
 .h1-1{
     font-size: 60px;
     font-weight: 600;
-    color: rgb(0, 8, 70);
+    color: white;
+    /* color: rgb(0, 8, 70); */
     padding-bottom: 10px;
-    text-shadow: 1px 1px 0 #ffffff;
+    text-shadow: 1px 1px 0 #1f6bbb;
     
    
   }
 
 .h1-2{
     font-size: x-large;
-    color: rgb(9, 43, 72);
-    text-shadow: 1px 1px 0 #f9f9f9;
+    color: rgb(202, 230, 255);
+    /* text-shadow: 1px 1px 0 #f9f9f9; */
     
 }
 
@@ -65,22 +54,6 @@
     border-top-right-radius: 20px;
 }
 
-/* .blueChicken:hover img{
-    transform: scale(1.01);
-}
-
-.pinkChicken:hover{
-    transform: scale(1.01);
-}
-
-.greenChicken:hover{
-    transform: scale(1.01);
-}
-
-.yellowChicken:hover{
-    transform: scale(1.01);
-} */
-
 .chickens-grid{
   position:absolute;
   top:110px;
@@ -97,25 +70,17 @@
   
  }  
 
-/* .grid-item{
-    background-color:rgb(125, 155, 255);
-    padding:8px;
-    color:#fff;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-  } */
   
   .muzieknootjes {
-    right: 300px;
-    top: -280px; 
+    right: 18rem;
+    top: 5rem; 
     display: block;
     margin: auto;
     position: relative;
     width: 50%;
     min-width: 300px;
     height: 100px;
-    border: 0px solid #000;
+    border: 0px solid rgb(0, 0, 0);
     
   }
   
@@ -184,8 +149,8 @@
 
   .button-signup{
     position: relative;
-    bottom: 70px;
-    right: -30px;
+    bottom: 4.7rem;
+    right: -4rem;
 }
   
   .button-signup, .button-login {
@@ -266,4 +231,67 @@
       display: none;
     } */
   }
+
+
+/* .ribbon-container{
+  position: absolute;
+  width: 90rem;
+  top: 3rem;
+  right: -1rem;
+} */
+
+  .ribbon {
+
+    /* top: -3rem;
+    right: -9rem; */
+    font-size: 16px !important;
+    /* This ribbon is based on a 16px font side and a 24px vertical rhythm. I've used em's to position each element for scalability. If you want to use a different font size you may have to play with the position of the ribbon elements */
+    width: 50%;
+    position: absolute;
+    top: 32rem;;
+    right: 13.5rem;
+    background: #020713;
+    color: #fff;
+    text-align: center;
+    padding: 1.5em 2em; /* Adjust to suit */
+    margin: 2em auto 3em; 
+    /* Based on 24px vertical rhythm. 48px bottom margin - normally 24 but the ribbon 'graphics' take up 24px themselves so we double it. */
+   }
+   .ribbon:before, .ribbon:after {
+    content: "";
+    position: absolute;
+    display: block;
+    bottom: -1em;
+    border: 1.5em solid #020713;
+    z-index: -1;
+   }
+   .ribbon:before {
+    left: -2em;
+    border-right-width: 1.5em;
+    border-left-color: transparent;
+   }
+   .ribbon:after {
+    right: -2em;
+    border-left-width: 1.5em;
+    border-right-color: transparent;
+   }
+   .ribbon .ribbon-content:before, .ribbon .ribbon-content:after {
+    content: "";
+    position: absolute;
+    display: block;
+    border-style: solid;
+    border-color: #020713 transparent transparent transparent;
+    bottom: -1em;
+   }
+   .ribbon .ribbon-content:before {
+    left: 0;
+    border-width: 1em 0 0 1em;
+   }
+   .ribbon .ribbon-content:after {
+    right: 0;
+    border-width: 1em 1em 0 0;
+   }
+   
+   
+   
   
