@@ -21,6 +21,22 @@
   background-color: #c4e3ff;
 }
 
+.list.yellow-theme{
+  background-color: #ffe19f;
+}
+
+.list.green-theme{
+  background-color: #c2ff9f;
+}
+
+.list.pink-theme{
+  background-color: #ffd0f2;
+}
+
+.list.blue-theme{
+  background-color: #9fe9ff;
+}
+
 .component{
     flex: 1 0 21%;
     /* https://stackoverflow.com/questions/29546550/flexbox-4-items-per-row */
@@ -42,6 +58,30 @@
   background-color: #6dade6;
   color: #010818;
   border: 1px solid #0c69bb;
+}
+
+.component.yellow-theme{
+  background-color: #ffaa18;
+  color: #010818;
+  border: 1px solid #ce6c03;
+}
+
+.component.green-theme{
+  background-color: #65edad;
+  color: #010818;
+  border: 1px solid #046a43;
+}
+
+.component.blue-theme{
+  background-color: #30e6e3;
+  color: #010818;
+  border: 1px solid #0996a0;
+}
+
+.component.pink-theme{
+  background-color: #fa8cbc;
+  color: #010818;
+  border: 1px solid #6a044d;
 }
 
 .name{

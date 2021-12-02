@@ -25,6 +25,12 @@ body {
     border: 3px solid white;
   }
 
+  .form-items.light-theme{
+    background-color: #6dade6;
+    color: #010818;
+    border: 1px solid #0c69bb;
+  }
+
   .formElement {
     display:flex;
     justify-content: space-around;

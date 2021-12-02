@@ -32,11 +32,31 @@
     background-color: var(--light-blue);
 }
 
+.navbar-container-bckg-dark.yellow-theme{
+    background-color: rgb(218, 136, 12);
+}
+
+.navbar-container-bckg-dark.green-theme{
+    background-color: rgb(36, 118, 117);
+}
+
+.navbar-container-bckg-dark.pink-theme{
+    background-color: rgb(138, 37, 109);
+}
+
+.navbar-container-bckg-dark.blue-theme{
+    background-color: rgb(23, 171, 168);
+}
+
 .navbar-logo--white{
     color: var(--white)
 }
 
 .navbar-logo--white.light-theme{
+    color: var(--dark-blue)
+}
+
+.navbar-logo--white.yellow-theme{
     color: var(--dark-blue)
 }
 
