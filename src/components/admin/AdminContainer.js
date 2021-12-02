@@ -5,6 +5,8 @@ import NewAlbumForm from './NewAlbumForm';
 import NewArtistForm from './NewArtistForm';
 import { useState, useEffect } from "react";
 import Navbar from '../navbar/Navbar';
+import chickenGroup from './chickenGroup.png';
+
 
 const AdminContainer = () => {
 
@@ -77,23 +79,25 @@ const AdminContainer = () => {
             <Navbar className="navbar-admin-container" />
 
 
-                {/* <div className="muzieknootjes-container"> */}
-                <div class="muzieknootjes2">
-                    <div class="noot-1_2">
-                        &#9835; &#9833;
-                    </div>
-                    <div class="noot-2_2">
-                        &#9833;
-                    </div>
-                    <div class="noot-3_2">
-                        &#9839; &#9834;
-                    </div>
-                    <div class="noot-4_2">
-                        &#9834;
-                    </div>
+            <div class="muzieknootjes2">
+                <div class="noot-1_2">
+                    &#9835; &#9833;
                 </div>
-                
-               
+                <div class="noot-2_2">
+                    &#9833;
+                </div>
+                <div class="noot-3_2">
+                    &#9839; &#9834;
+                </div>
+                <div class="noot-4_2">
+                    &#9834;
+                </div>
+            </div>
+            
+       
+            <div>
+                <img src={chickenGroup} alt="" className="chicken-background" />
+            </div>
             <div className="admin-forms-container">
 
                 <div className="new-artist-form form-items">
@@ -106,7 +110,20 @@ const AdminContainer = () => {
                     <NewSongForm onSongSubmission={addNewSong} />
                 </div>
             </div>
-
+            <div class="muzieknootjes3">
+                <div class="noot-1_2">
+                    &#9835; &#9833;
+                </div>
+                <div class="noot-2_2">
+                    &#9833;
+                </div>
+                <div class="noot-3_2">
+                    &#9839; &#9834;
+                </div>
+                <div class="noot-4_2">
+                    &#9834;
+                </div>
+            </div>
         </div>
     )
 }

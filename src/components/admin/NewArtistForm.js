@@ -56,7 +56,9 @@ const NewArtistForm = ({onArtistSubmission}) => {
                 <input type="text" id="biggestHit" value={biggestHit} onChange={handleBiggestHitChange}/>
             </div>
             <div className="formElement">
-                <input type="submit" value="Add Artist"/>
+                {/* <input type="submit" value="Add Artist"/> */}
+                <button type="submit" class="button-64" role="button"><span class="text">Add Artist</span></button>
+
             </div>
         </form>
     </>

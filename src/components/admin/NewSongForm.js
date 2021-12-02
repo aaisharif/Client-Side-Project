@@ -100,7 +100,9 @@ const NewSongForm = ({onSongSubmission}) => {
                 <input type="text" id="platform" value={platform} onChange={handlePlatformChange}/>
             </div>
             <div className="formElement">
-                <input type="submit" value="Add Song"/>
+            <button type="submit" class="button-64" role="button"><span class="text">Add Song</span></button>
+
+                {/* <input type="submit" value="Add Song"/> */}
             </div>
             {/* <div className="formElement">
                 <input type="update" value="Update Album"/>
