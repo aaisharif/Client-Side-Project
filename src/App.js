@@ -6,7 +6,7 @@ import Navbar from './components/navbar/Navbar';
 import AlbumContainer from './containers/AlbumContainer';
 import SongContainer from './containers/SongContainer'
 import AdminContainer from './components/admin/AdminContainer';
-
+import Login from './components/login/Login';
 
 function App() {
   return (
@@ -17,6 +17,8 @@ function App() {
     // </div>
 
     <div className="App">
+     <Login/>
+   
     <Router>
       <Sidebar />
       <Switch>

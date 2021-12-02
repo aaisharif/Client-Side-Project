@@ -9,6 +9,30 @@ import forChickens from './chickens/forchickens.png'
 
 const AlbumList = ({ albums }) => {
 
+const AUTH_URL = "https://accounts.spotify.com/authorize?client_id=de43b3ce734a46a1a0c1b276564fcd50&response_type=code&redirect_uri=http://localhost:3000&scope=streaming%20user-read-email%20user-read-private%20user-library-read%20user-library-modify%20user-read-playback-state%20user-modify-playback-state"
+
+    const clientId = 'de43b3ce734a46a1a0c1b276564fcd50';
+    const clientSecret = '32d35be5727f4d69b15fcdd24accc117';
+
+    const getToken = () => {
+        
+        fetch("https://accounts.spotify,com/api.token", {
+            method: 'POST',
+            headers: {
+                'Content-Type' : 'application/x-www-form-urlencoded', 
+                'Authorization' : 'Basic ' + btoa(clientId + ':' + clientSecret)
+            },
+            body: 'grant_type=client_credentials'
+        })
+            .then(res=> res.json()).then(data=>data.access_tokem)
+
+    }
+
+console.log(getToken)
+
+
+
+
     const albumComponents = albums.map(album => {
 
         return (
