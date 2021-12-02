@@ -9,6 +9,7 @@
     /* --dark-blue: #051337; */
     --dark-blue: #020713;
     --white: #fff; 
+    --light-blue: #1a71bd;
 }
 
 
@@ -27,8 +28,16 @@
     background-color: var(--dark-blue);
 }
 
+.navbar-container-bckg-dark.light-theme{
+    background-color: var(--light-blue);
+}
+
 .navbar-logo--white{
     color: var(--white)
+}
+
+.navbar-logo--white.light-theme{
+    color: var(--dark-blue)
 }
 
 .navbar-logo-title{
