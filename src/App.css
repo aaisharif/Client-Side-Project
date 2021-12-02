@@ -17,6 +17,10 @@
   padding-left: 280px;
 }
 
+.list.light-theme{
+  background-color: #c4e3ff;
+}
+
 .component{
     flex: 1 0 21%;
     /* https://stackoverflow.com/questions/29546550/flexbox-4-items-per-row */
@@ -32,6 +36,12 @@
     height: 410px;
     width: 250px;
 
+}
+
+.component.light-theme{
+  background-color: #6dade6;
+  color: #010818;
+  border: 1px solid #0c69bb;
 }
 
 .name{
