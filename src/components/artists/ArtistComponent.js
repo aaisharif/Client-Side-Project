@@ -2,6 +2,7 @@ import React from 'react'
 import {useState} from 'react'
 import placeholder from '../../placeholder/artistplaceholder.jpeg'
 import { BsTrash, BsFillTrashFill, BsHeart, BsHeartFill } from "react-icons/bs";
+import BirdContainer from './BirdContainer';
 
 
 const ArtistComponent= ({artist}) => {
@@ -12,8 +13,12 @@ const ArtistComponent= ({artist}) => {
         setModeHeart(!modeHeart);  
    }
 
+   
     return(
         <div className= "component">
+            {/* <div>
+            <BirdContainer/>
+            </div> */}
             
             <img src = {placeholder} alt={artist.name}/>
 
