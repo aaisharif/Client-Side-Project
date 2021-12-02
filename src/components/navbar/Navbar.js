@@ -7,13 +7,12 @@ import { AiOutlineClose } from "react-icons/ai"
 
 function Navbar({ handleType, filter }) {
 
-    // const [mode, setMode] = useState(false);
+    const [mode, setMode] = useState(false);
     const [open, setOpen] = useState(false);
 
 
     // const handleOnClick = () => {
     //     setMode(!mode);
-
     // }
     
     // Light to Dark Theme 
@@ -35,6 +34,8 @@ function Navbar({ handleType, filter }) {
             component.forEach((c) => {
                 c.classList.toggle('light-theme')
             })
+
+            setMode(!mode);
         })
     }
 
@@ -56,13 +57,11 @@ function Navbar({ handleType, filter }) {
                         <input className="navbar-search-searchbar" type="search" size="15" placeholder="Search..." value={filter} onChange={handleType} />
                     </div>
                     <div className="navbar-toggle">
-
-                        <FaMoon className="moon" onClick={() => changeTheme()} />
-                        {/* {mode ?
-                            (<FaSun className="moon" onClick={handleOnClick} onClick={() => changeTheme()} />)
+                        {mode ?
+                            (<FaSun className="moon" onClick={() => changeTheme()} />)
                             :
-                            (<FaMoon className="moon" onClick={handleOnClick} onClick={() => changeTheme()}/>)
-                            } */}
+                            (<FaMoon className="moon" onClick={() => changeTheme()}/>)
+                            }
                     </div>
                     {open && <MobileNavigation isMobile={true} closeMobileMenu={closeMobileMenu} />}
                 </div>

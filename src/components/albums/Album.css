@@ -223,7 +223,7 @@
   }   */
   
   @media screen and (max-width: 1360px){
-    .home-page{
+    .home-page, .ribbon-container{
       display: none;
     }
 
