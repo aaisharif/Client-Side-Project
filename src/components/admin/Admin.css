@@ -8,6 +8,10 @@
   background-color: red;
 } */
 
+body {
+  background-color: #040d22;;
+}
+
   .form-items{
     width: 21rem;
     /* height: 30rem; */
@@ -207,7 +211,7 @@
     min-width: 300px;
     height: 200px;
     border: 0px solid #000;
-    top: 20%;
+    top: 15%;
     left: 30%;
     z-index: 1;
   }
@@ -222,7 +226,7 @@
     border: 0px solid #000;
     top: 80%;
     left: 30%;
-    z-index: 1;
+    /* z-index: 1; */
   }
   
   .noot-1_2,
