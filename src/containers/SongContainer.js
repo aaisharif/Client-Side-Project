@@ -8,12 +8,20 @@ const SongContainer = () => {
     const [songs, setSongs] = useState ([]);
     const [filter, setFilter] = useState('');
     const [favourites, setFavourites] = useState([]);
+    const [modeHeart, setModeHeart] = useState(false);
+
+    const addFavouriteSong = (song) =>{
+        const newFavouritesList = [...favourites, song]; 
+        setFavourites(newFavouritesList);
+    }
+
+    const handleOnClick = () => {
+        setModeHeart(!modeHeart);  
+   }
 
     const handleType = (e) => {
         setFilter(e.target.value);
     }
-
-    console.log(songs)
 
     const getSongData = () => {
         fetch("http://localhost:8080/api/v1/songs")
@@ -67,17 +75,6 @@ const SongContainer = () => {
     const searchSong = (songs) => {
         return songs.filter(song => song.song_name.toLowerCase().indexOf(filter.toLowerCase().trim()) > -1); 
     }
-
-    const addFavouriteSong = (song) =>{
-        const newFavouritesList = [...favourites, song]; 
-        setFavourites(newFavouritesList);
-    }
-
-    const [modeHeart, setModeHeart] = useState([]);
-
-    const handleOnClick = () => {
-        setModeHeart(!modeHeart);  
-   }
    
     return(
         songs.length > 0 ?
@@ -87,10 +84,14 @@ const SongContainer = () => {
             {/* <NewSongForm onSongSubmission={addNewSong}/>    */}
             <SongList 
             songs={searchSong(songs)} 
-            favouriteComponent={handleOnClick}
-            handleFavouritesClick={addFavouriteSong}
+            favourited={handleOnClick}
+            addFavouriteSong={addFavouriteSong}
             onUpdateSongById={updateSongById} 
-            onDeleteSongById={deleteSongById}/>
+            onDeleteSongById={deleteSongById}
+            modeHeart={modeHeart}
+            
+            
+            />
         
         </div>
         :

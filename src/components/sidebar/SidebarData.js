@@ -17,11 +17,6 @@ const SidebarData = [
         cName: 'sidebar-text'
     },
     {
-        title: 'Playlist',
-        path: '/playlist',
-        cName: 'sidebar-text'
-    },
-    {
         title: 'Admin',
         path: '/admin',
         cName: 'sidebar-text'

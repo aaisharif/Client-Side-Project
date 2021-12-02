@@ -4,10 +4,24 @@ import placeholder from '../../placeholder/songplaceholder.jpeg'
 import { BsTrash, BsFillTrashFill, BsHeart, BsHeartFill } from "react-icons/bs";
 
 
-const SongComponent= ({song, favouriteComponent}) => {
+const SongComponent= ({song, favourited}) => {
 
-    const [modeHeart, setModeHeart] = useState([]);
+    const [modeHeart, setModeHeart] = useState(false);
+    const [favourites, setFavourites] = useState([]);
 
+
+    const addFavouriteSong = (song) =>{
+        const newFavouritesList = [...favourites, song]; 
+        setFavourites(newFavouritesList);
+        setModeHeart(!modeHeart);  
+    }
+
+
+//     const handleOnClick = () => {
+//         setModeHeart(!modeHeart);  
+//    }
+
+   console.log(favourites)
 
     return(
         <div className= "component">
@@ -39,9 +53,9 @@ const SongComponent= ({song, favouriteComponent}) => {
             </div> */}
             <div className="float-icon">
                         { modeHeart ? 
-                        (<BsHeartFill size={28}  color={'hotpink'} onClick={favouriteComponent}/>)
+                        (<BsHeartFill size={28}  color={'hotpink'} onClick={() => addFavouriteSong()}/>)
                         :
-                        (<BsHeart size={28} onClick={favouriteComponent}/>)
+                        (<BsHeart size={28} onClick={() => addFavouriteSong()}/>)
                         }
             </div>
             </div>
