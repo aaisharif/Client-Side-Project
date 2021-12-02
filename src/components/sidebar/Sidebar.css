@@ -17,6 +17,22 @@
     background-color: #4294dc;
 }
 
+.sidebar.yellow-theme{
+    background-color: #e39713;
+}
+
+.sidebar.green-theme{
+    background-color: rgb(62, 169, 123);
+}
+
+.sidebar.pink-theme{
+    background-color: rgb(181, 83, 142);
+}
+
+.sidebar.blue-theme{
+    background-color: rgb(95, 199, 206);
+}
+
 .sidebar-text {
     display: flex;
     justify-content: center;

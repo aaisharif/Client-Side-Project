@@ -15,7 +15,7 @@ function Navbar({ handleType, filter }) {
     //     setMode(!mode);
 
     // }
-
+    
     // Light to Dark Theme 
     const changeTheme = () => {
         const moon = document.querySelector('.moon')
@@ -23,12 +23,14 @@ function Navbar({ handleType, filter }) {
         const sidebar = document.querySelector('.sidebar')
         const list = document.querySelector('.list')
         const component = document.querySelectorAll('.component')
+       
 
         moon.addEventListener('click', () => {
             document.body.classList.toggle('light-theme')
             navbar.classList.toggle('light-theme')
             sidebar.classList.toggle('light-theme')
             list.classList.toggle('light-theme')
+            
 
             component.forEach((c) => {
                 c.classList.toggle('light-theme')
